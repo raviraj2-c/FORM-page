@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="container" onsubmit="sendEmail(); reset(); return false;">
+    <h2>Plant Nursery</h2>
+    <form id="plantForm">
+      <label for="NAME">Your Name:</label>
+      <input type="text" id="NAME" name="NAME" placeholder="Your Good Name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+
+      <label for="plant">Select a Plant:</label>
+      <select id="plant" name="plant">
+        <option value="rose">Rose</option>
+        <option value="lily">Lily</option>
+        <option value="cactus">Cactus</option>
+        
+      </select>
+
+      <input type="button" value="Submit" onclick="send()">
+    </form>
+  </div>
+      <footer>
+        <p>&copy; 2023 Your Plant Nursery</p>
+    </footer>
+      <script src="scripts.js"></script>
+      <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+</body>
+</html>
